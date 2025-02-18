@@ -1,0 +1,53 @@
+SQL Commands
+
+Show DB list
+1.show databases;
+
+Create DB
+1.create database <db_name>;
+
+Delete DB
+1.drop database <db_name>;
+
+Select created DB
+1. use <db_name>;
+2. select database();
+
+Create Table
+1. create table <table_name>(field_name field_type);
+2. Example: create table students(name varchar(50), age int);
+3. Note: table name always should be plural because we are not going to insert one data.
+
+Create Table with not null and default value
+1. create table <table_name>(field_name field_type);
+2. Example: create table students(name varchar(50) not null default ‘unnamed’, age int not null default 0);
+3. Note: table name always should be plural because we are not going to insert one data.
+4. not null means should not be null;
+5. default value means by default set values;
+
+Show Table list 
+1.show tables;
+
+Show Table fields 
+1.desc <table_name>;
+2.show columns from <table_name>;
+
+Delete Table
+1.drop table <table_name>;
+
+Insert Values to table
+1. Insert into <table_name>(field1, field2) values(1, ‘Rohan’);
+2. Example: Insert into student (name, age) values(1, ‘Rohan’);
+
+
+Show values from Table
+1. select * from <table_name>;
+2. Example: select * from students;
+
+Insert field or column into table
+1. alter table <table_name> add <fileld_name> <field_type>;
+2. Example: alter table students add class int;
+
+Delete field or column from table
+1. alter table <table_name> drop <fileld_name>;
+2. Example: alter table students drop class;
