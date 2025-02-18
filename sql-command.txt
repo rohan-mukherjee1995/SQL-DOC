@@ -51,3 +51,7 @@ Insert field or column into table
 Delete field or column from table
 1. alter table <table_name> drop <fileld_name>;
 2. Example: alter table students drop class;
+
+
+xxxx
+xxx
