@@ -1,0 +1,49 @@
+password cred living fit
+
+https://docs.google.com/spreadsheets/d/1wH5r0Mtwo5qvS2RsDc_6L6eh52nd4zeGIEmkpxdW-bY/edit?gid=0#gid=0
+
+
+
+cd android && ./gradlew clean && cd ../
+cd android && ./gradlew assembleRelease
+
+cd android && ./gradlew clean && cd ../
+cd android && ./gradlew assembleDebug
+
+
+for aab
+cd android && ./gradlew bundleRelease 
+
+
+Living fit backend
+sls offline --reloadHandler
+'mycontent-feature-videos-api'
+'modify-metadata-my-content-new'
+
+
+Linking code react native
+
+import { Linking, Platform } from 'react-native';
+const openApp = (id)
+ => {
+  const appLink = `livingfit://WorkoutPlanDetails/${id}`;
+  const playStoreLink = 'https://play.google.com/store/apps/details?id=com.livingfit';
+  const appStoreLink = 'https://apps.apple.com/app/idYOUR_APP_ID';
+
+  Linking.canOpenURL(appLink).then((supported) => {
+    console.log('appLink',appLink, supported);
+    if (supported) {
+      Linking.openURL(appLink);
+    } else {
+      Linking.openURL(Platform.OS === 'ios' ? appStoreLink : playStoreLink);
+    }
+  });
+};
+
+export default openApp
+
+Git related command
+
+git remote add origin git@github.com:ai-dev-em-24/enmemoria-admin-frontend.git
+git branch -M main
+git push -u origin main
