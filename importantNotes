@@ -52,9 +52,10 @@ project link
 https://github.com/codeclouds-team-pod21/livingfit-app
 https://github.com/codeclouds-team-pod21/livingfit-api
 
-serverless offline start
-
-
 apple id and password
 rohan.mukherjee@codeclouds.co.in
 Cispl@123
+
+serverless project start command
+
+serverless offline start
