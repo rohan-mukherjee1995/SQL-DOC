@@ -1,9 +1,7 @@
-password cred living fit
-
+password cred living fit:
 https://docs.google.com/spreadsheets/d/1wH5r0Mtwo5qvS2RsDc_6L6eh52nd4zeGIEmkpxdW-bY/edit?gid=0#gid=0
 
-
-
+for react native build:
 cd android && ./gradlew clean && cd ../
 cd android && ./gradlew assembleRelease
 
@@ -11,7 +9,7 @@ cd android && ./gradlew clean && cd ../
 cd android && ./gradlew assembleDebug
 
 
-for aab
+for aab:
 cd android && ./gradlew bundleRelease 
 
 
@@ -42,20 +40,22 @@ const openApp = (id)
 
 export default openApp
 
-Git related command
-
+Git related command:
 git remote add origin git@github.com:ai-dev-em-24/enmemoria-admin-frontend.git
 git branch -M main
 git push -u origin main
 
-project link
+project link:
 https://github.com/codeclouds-team-pod21/livingfit-app
 https://github.com/codeclouds-team-pod21/livingfit-api
 
-apple id and password
+apple id and password:
 rohan.mukherjee@codeclouds.co.in
 Cispl@123
 
-serverless project start command
-
+serverless project start command:
 serverless offline start
+
+Find Your App’s SHA-256 Fingerprint Run the following command:
+keytool -list -v -keystore android/app/debug.keystore -alias androiddebugkey -storepass android
+
