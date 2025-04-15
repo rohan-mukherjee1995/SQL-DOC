@@ -59,3 +59,11 @@ serverless offline start
 Find Your App’s SHA-256 Fingerprint Run the following command:
 keytool -list -v -keystore android/app/debug.keystore -alias androiddebugkey -storepass android
 
+
+deeplink testing command
+android==> adb shell am start -W -a android.intent.action.VIEW -d "yourappscheme://path/to/screen"
+ios==> xcrun simctl openurl booted "yourappscheme://path/to/screen"
+
+get SHA fingerprint certificate 
+==>keytool -printcert -jarfile "path of your project release.apk"
+==> keytool -printcert -jarfile app-release.apk
