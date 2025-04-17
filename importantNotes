@@ -67,3 +67,6 @@ ios==> xcrun simctl openurl booted "yourappscheme://path/to/screen"
 get SHA fingerprint certificate 
 ==>keytool -printcert -jarfile "path of your project release.apk"
 ==> keytool -printcert -jarfile app-release.apk
+
+deeplink xcode setup
+==> need to add "applinks:app.living.fit" in associated domain section under "signing and capabilities" section
