@@ -1,0 +1,53 @@
+1. Basic Find
+db.users.find(); // returns all documents
+db.users.find({ age: 25 }); // find documents where age = 25
+
+2. Comparison Operators
+db.users.find({ age: { $gt: 18 } }); // age > 18
+db.users.find({ age: { $gte: 18 } }); // age >= 18
+db.users.find({ age: { $lt: 30 } }); // age < 30
+db.users.find({ age: { $lte: 30 } }); // age <= 30
+db.users.find({ age: { $ne: 25 } }); // age != 25
+
+3. Logical Operators
+// $and (explicit)
+db.users.find({ $and: [{ age: { $gt: 20 } }, { isActive: true }] });
+
+// implicit AND
+db.users.find({ age: { $gt: 20 }, isActive: true });
+
+// $or
+db.users.find({ $or: [{ age: { $lt: 18 } }, { isActive: false }] });
+
+// $nor
+db.users.find({ $nor: [{ age: { $lt: 18 } }, { isActive: false }] });
+
+// $not
+db.users.find({ age: { $not: { $gt: 30 } } });
+
+4. Array Queries
+// Exact match
+db.users.find({ tags: ["sports", "music"] });
+
+// Match any value in array
+db.users.find({ tags: { $in: ["sports"] } });
+
+// Match all values
+db.users.find({ tags: { $all: ["sports", "music"] } });
+
+// Match array element by condition
+db.users.find({ "scores": { $elemMatch: { $gt: 80, $lt: 90 } } });
+
+// Match by index
+db.users.find({ "scores.0": 100 }); // first element is 100
+
+// Array length
+db.users.find({ tags: { $size: 3 } });
+
+5. Embedded Documents
+// Exact match on embedded doc
+db.users.find({ address: { city: "Mumbai", zip: "400001" } });
+
+// Match a field inside embedded document
+db.users.find({ "address.city": "Mumbai" });
+
